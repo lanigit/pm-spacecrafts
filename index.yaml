@@ -181,7 +181,7 @@ components:
   schemas:
     SpacecraftId:
       description: The unique identifier of a spacecraft
-      type: string
+      type: object
     Spacecraft:
       type: object
       required:
