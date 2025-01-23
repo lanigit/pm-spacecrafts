@@ -182,6 +182,10 @@ components:
     SpacecraftId:
       description: The unique identifier of a spacecraft
       type: object
+      required:
+        - id
+        - name
+        - type
     Spacecraft:
       type: object
       required:
@@ -189,8 +193,8 @@ components:
         - name
         - type
       properties:
-        id:
-          $ref: '#/components/schemas/SpacecraftId'
+        # id:
+        #   $ref: '#/components/schemas/SpacecraftId'
         name:
           type: string
         type:

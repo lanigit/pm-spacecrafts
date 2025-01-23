@@ -28,20 +28,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/spacecrafts/:spacecraftId",
+									"raw": "{{baseUrl}}/spacecrafts/{{$randomInt}}",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"spacecrafts",
-										":spacecraftId"
-									],
-									"variable": [
-										{
-											"key": "spacecraftId",
-											"value": "<string>",
-											"description": "(Required) The unique identifier of the spacecraft"
-										}
+										"{{$randomInt}}"
 									]
 								}
 							},
@@ -88,7 +81,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "<string>"
+									"body": "{\n  \"id\": \"commodo\",\n  \"name\": -540321.788342312,\n  \"type\": \"in tempor\"\n}"
 								},
 								{
 									"id": "9a5bcf62-a53c-4966-b356-09e97a52e724",
@@ -282,21 +275,23 @@
 										"value": "application/json"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"et in sed veniam\",\n    \"type\": \"{{$randomTransactionType}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "{{baseUrl}}/spacecrafts/:spacecraftId",
+									"raw": "{{baseUrl}}/spacecrafts/{{$randomInt}}",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"spacecrafts",
-										":spacecraftId"
-									],
-									"variable": [
-										{
-											"key": "spacecraftId",
-											"value": "<string>",
-											"description": "(Required) The unique identifier of the spacecraft"
-										}
+										"{{$randomInt}}"
 									]
 								}
 							},
@@ -343,7 +338,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "<string>"
+									"body": "{\n  \"id\": -23436365.81428972,\n  \"name\": \"et in sed veniam\",\n  \"type\": 51508988\n}"
 								},
 								{
 									"id": "ec53444b-972c-43ef-ae35-7054ca170e4a",
@@ -538,20 +533,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/spacecrafts/:spacecraftId",
+									"raw": "{{baseUrl}}/spacecrafts/{{$randomInt}}",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"spacecrafts",
-										":spacecraftId"
-									],
-									"variable": [
-										{
-											"key": "spacecraftId",
-											"value": "<string>",
-											"description": "(Required) The unique identifier of the spacecraft"
-										}
+										"{{$randomInt}}"
 									]
 								}
 							},
@@ -598,7 +586,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "<string>"
+									"body": "{\n  \"id\": true,\n  \"name\": \"ullamco veli\",\n  \"type\": false\n}"
 								},
 								{
 									"id": "40fd2fcb-b615-4ca7-a4fb-e99ecb17d8e9",
@@ -842,7 +830,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"capsule\",\n  \"description\": \"<string>\"\n}"
+							"body": "{\n  \"id\": {\n    \"id\": 85848107,\n    \"name\": 22019619,\n    \"type\": \"dolor\"\n  },\n  \"name\": \"<string>\",\n  \"type\": \"capsule\",\n  \"description\": \"<string>\"\n}"
 						},
 						{
 							"id": "9eca99c2-5e8d-4480-8339-c51f4fd54d75",
@@ -1059,7 +1047,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"capsule\",\n  \"description\": \"<string>\"\n}"
+							"body": "{\n  \"id\": {\n    \"id\": false,\n    \"name\": 25952080.59989944,\n    \"type\": 51556601.35149035\n  },\n  \"name\": \"<string>\",\n  \"type\": \"capsule\",\n  \"description\": \"<string>\"\n}"
 						},
 						{
 							"id": "1b10af19-c807-44a9-822e-a87612445489",
@@ -1243,7 +1231,8 @@
 		{
 			"id": "af4de2b7-c711-489a-8894-a80098bb308f",
 			"key": "baseUrl",
-			"value": "/"
+			"value": "/",
+			"type": "any"
 		}
 	]
 }
