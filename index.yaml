@@ -3,7 +3,8 @@ info:
   version: '1.0.0'
   title: 'Sample API'
   description: Buy or rent spacecrafts
-
+servers:
+  - url: https://b9f922a1-67f6-4ce0-b209-c035157e3ae0.mock.pstmn.io
 paths:
   /spacecrafts/{spacecraftId}:
     parameters:
@@ -47,6 +48,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     put:
+      summary: Update a spacecraft
       responses:
         '200': 
          description: The updated spacecraft corresponding to the provided `spacecraftId`
@@ -79,13 +81,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     delete: 
+      summary: Delete a spacecraft
       responses: 
         '204': 
           description: The newly deleted resource, an empty object will be returned
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SpacecraftId'
         '401':
           description: Unauthorized access 
           content:
@@ -193,8 +192,8 @@ components:
         - name
         - type
       properties:
-        # id:
-        #   $ref: '#/components/schemas/SpacecraftId'
+        id:
+          $ref: '#/components/schemas/SpacecraftId'
         name:
           type: string
         type:
